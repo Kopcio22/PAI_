@@ -12,11 +12,8 @@ namespace Application;
 
 use Application\Controller\IndexController;
 use Application\Controller\KsiazkiController;
-use Application\Controller\AutorzyController;
 use Application\Controller\KsiazkiControllerFactory;
-use Application\Controller\AutorzyControllerFactory;
 use Application\Form\KsiazkaForm;
-use Application\Form\AutorForm;
 use Application\Model\Autor;
 use Application\Model\Ksiazka;
 use Laminas\Router\Http\Literal;
@@ -50,19 +47,9 @@ return [
             'ksiazki' => [
                 'type' => Segment::class,
                 'options' => [
-                    'route' => '/ksiazki[/:action][/:id]',
+                    'route' => '/ksiazki[/:action[/:id]]',
                     'defaults' => [
                         'controller' => KsiazkiController::class,
-                        'action' => 'lista',
-                    ],
-                ],
-            ],
-            'autorzy' => [
-                'type' => Segment::class,
-                'options' => [
-                    'route' => '/autorzy[/:action][/:id]',
-                    'defaults' => [
-                        'controller' => AutorzyController::class,
                         'action' => 'lista',
                     ],
                 ],
@@ -73,7 +60,6 @@ return [
         'factories' => [
             IndexController::class => InvokableFactory::class,
             KsiazkiController::class => KsiazkiControllerFactory::class,
-            AutorzyController::class => AutorzyControllerFactory::class,
         ],
     ],
     'service_manager' => [
@@ -81,7 +67,6 @@ return [
             Ksiazka::class => InvokableFactory::class,
             Autor::class => InvokableFactory::class,
             KsiazkaForm::class => ReflectionBasedAbstractFactory::class,
-            AutorForm::class => ReflectionBasedAbstractFactory::class,
         ],
     ],
     'view_manager' => [

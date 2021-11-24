@@ -47,25 +47,6 @@ class Ksiazka implements DbAdapter\AdapterAwareInterface
 
         return $wynik;
     }
-    public function pobierz2($id)
-    {
-        $dbAdapter = $this->adapter;
-        $sql = new Sql($dbAdapter);
-        $select = $sql->select();
-        $select->from(['k' => 'ksiazki']);
-        $select->where(['k.id' => $id]);
-        $select->join(['a' => 'autorzy'], 'k.id_autora = a.id', ['imie', 'nazwisko']);
-        $select->order('k.tytul');
-
-        $selectString = $sql->buildSqlString($select);
-        $wynik = $dbAdapter->query($selectString, $dbAdapter::QUERY_MODE_EXECUTE);
-
-        if ($wynik->count()) {
-            return $wynik->current();
-        } else {
-            return [];
-        }
-    }
 
     public function pobierz($id)
     {

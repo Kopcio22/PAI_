@@ -20,8 +20,6 @@
             <td><?= $ks->cena ?></td>
             <td><?= $ks->liczba_stron ?></td>
             <td>
-                <a href="<?= $this->url('ksiazki', ['action' => 'szczegoly', 'id' => $ks->id]) ?>" title="pokaż szczegóły"><i
-                            class="fas fa-info-circle"></i></a>
                 <a href="<?= $this->url('ksiazki', ['action' => 'edytuj', 'id' => $ks->id]) ?>" title="edytuj rekord"><i
                             class="far fa-edit"></i></a>
                 <a href="<?= $this->url('ksiazki', ['action' => 'usun', 'id' => $ks->id]) ?>" title="usuń rekord"><i

@@ -15,11 +15,13 @@
 return [
     'db' => [
         'driver' => 'Pdo',
-        'dsn' => 'mysql:dbname=pai;host=localhost',
+        //'dsn' => 'mysql:dbname=pai;host=db', // docker
+        'dsn' => 'mysql:dbname=pai;host=localhost', // xampp
         'driver_options' => [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
         ],
         'username' => 'root',
-        'password' => '',
+        //'password' => 'admin', // docker
+        'password' => '', // xampp
     ],
 ];

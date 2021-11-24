@@ -12,6 +12,10 @@
  * This should be an array of module namespaces used in the application.
  */
 return [
+    'Laminas\Log',
+    'Laminas\Serializer',
+    'Laminas\Paginator',
+    'Laminas\Navigation',
     'Laminas\Db',
     'Laminas\Mvc\Plugin\FilePrg',
     'Laminas\Mvc\Plugin\FlashMessenger',
@@ -25,5 +29,7 @@ return [
     'Laminas\I18n',
     'Laminas\Router',
     'Laminas\Validator',
+    'TwbsHelper',
     'Application',
+    'Nieruchomosci',
 ];

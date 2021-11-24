@@ -80,22 +80,10 @@ class KsiazkiController extends AbstractActionController
     public function usunAction()
     {
         $id = (int)$this->params()->fromRoute('id');
-        if (empty($id)) {
-            $this->redirect()->toRoute('ksiazki');
+        if ($id) {
+            $this->ksiazka->usun($id);
         }
-
-        $this->ksiazka->usun($id);
 
         return $this->redirect()->toRoute('ksiazki');
-    }
-    public function szczegolyAction()
-    {
-        $id = (int)$this->params()->fromRoute('id');
-        if (empty($id)) {
-            $this->redirect()->toRoute('ksiazki');
-        }
-        return new ViewModel([
-            'ksiazka' => $this->ksiazka->pobierz2($id),
-        ]);
     }
 }
