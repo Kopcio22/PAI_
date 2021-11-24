@@ -1,0 +1,11 @@
+<h1>Dni tygodnia</h1>
+
+<ul>
+    <?php foreach ($this->dni_tygodnia as $i => $dzien): ?>
+        <li>
+            <?=$i + 1 ?>
+            :
+            <strong><?=$dzien ?></strong>
+        </li>
+    <?php endforeach ?>
+</ul>

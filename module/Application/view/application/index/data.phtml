@@ -1,0 +1,11 @@
+<h1>Dzisiejsza data</h1>
+<p class="lead"><?= $this->dzisiaj ?></p>
+
+<h1>Dni tygodnia</h1>
+<ol>
+    <?php foreach ($this->dni_tygodnia as $dzien): ?>
+        <li>
+            <?= $dzien ?>
+        </li>
+    <?php endforeach ?>
+</ol>
