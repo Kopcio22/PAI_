@@ -5,7 +5,7 @@ namespace Application\Controller;
 use Application\Form\KsiazkaForm;
 use Application\Model\Ksiazka;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class KsiazkiControllerFactory implements FactoryInterface
 {

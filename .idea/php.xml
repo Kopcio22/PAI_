@@ -38,6 +38,13 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-view" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-validator" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-uri" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/neilime/zf-twbs-helper-module" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-navigation" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-progressbar" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-serializer" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-paginator" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-log" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />

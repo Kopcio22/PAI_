@@ -9,7 +9,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -49,6 +51,13 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-view" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-validator" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-uri" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/neilime/zf-twbs-helper-module" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-navigation" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-progressbar" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-serializer" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-paginator" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-log" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jEX5KuXSFpAuhELtYCMDDCdGlS" />
@@ -59,7 +68,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pi2" />
+    <property name="dumpAutoload C:/Users/pawelz/Desktop/xampp/htdocs/pai/composer.json" value="--no-interaction --ansi --verbose" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -78,8 +88,11 @@
       <option name="presentableId" value="Default" />
       <updated>1603370040479</updated>
       <workItem from="1603370041892" duration="2712000" />
-      <workItem from="1605102984912" duration="15573000" />
-      <workItem from="1637778618779" duration="8000" />
+      <workItem from="1603890995574" duration="5326000" />
+      <workItem from="1605551997845" duration="5645000" />
+      <workItem from="1605640045598" duration="1632000" />
+      <workItem from="1637779080788" duration="13000" />
+      <workItem from="1637779106050" duration="15000" />
     </task>
     <servers />
   </component>
@@ -87,10 +100,22 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1605106532374">
+    <state x="944" y="415" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603892366520">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="944" y="415" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1603892366520" />
+    <state x="1038" y="574" key="ComposerDumpAutoloadDialog" timestamp="1603895840615">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1038" y="574" key="ComposerDumpAutoloadDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1603895840615" />
+    <state x="998" y="615" key="ComposerInitDialogKey" timestamp="1603895837829">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="998" y="615" key="ComposerInitDialogKey/0.0.2560.1440@0.0.2560.1440" timestamp="1603895837829" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1605553092178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/-1680.20.1680.1010/1920.51.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1605106532374" />
+    <state x="740" y="274" key="FileChooserDialogImpl/-1680.20.1680.1010/1920.51.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1605553092178" />
     <state x="895" y="382" key="NewPhpClassDialog" timestamp="1603371591747">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -99,9 +124,13 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1068" y="624" key="NewPhpFileDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1603370715742" />
-    <state x="-1408" y="20" width="1424" height="1028" key="dock-window-1" timestamp="1605117988351">
-      <screen x="-1680" y="20" width="1680" height="1010" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1605640717059">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1408" y="20" width="1424" height="1028" key="dock-window-1/-1680.20.1680.1010/1920.51.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1605117988351" />
+    <state x="616" y="240" key="run.anything.popup/-1680.20.1680.1010/1920.51.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1605640717059" />
+    <state x="859" y="318" key="search.everywhere.popup" timestamp="1603895995242">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="859" y="318" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1603895995242" />
   </component>
 </project>

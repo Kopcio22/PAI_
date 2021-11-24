@@ -18,11 +18,15 @@
         "laminas/laminas-mvc-form": "^1.0",
         "laminas/laminas-json": "^3.1.2",
         "laminas/laminas-mvc-plugins": "^1.0.1",
-        "laminas/laminas-session": "^2.9.1"
+        "laminas/laminas-session": "^2.9.1",
+        "laminas/laminas-navigation": "^2.10",
+        "laminas/laminas-paginator": "^2.9",
+        "neilime/zf-twbs-helper-module": "^3.3"
     },
     "autoload": {
         "psr-4": {
-            "Application\\": "module/Application/src/"
+            "Application\\": "module/Application/src/",
+            "Nieruchomosci\\": "module/Nieruchomosci/src/"
         }
     },
     "autoload-dev": {
