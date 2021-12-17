@@ -21,6 +21,7 @@ class Module implements ConfigProviderInterface, InitProviderInterface
             MvcEvent::EVENT_DISPATCH,
             function(MvcEvent $e) {
                 $e->getTarget()->layout('layout/nieruchomosci');
+
                 $e->getViewModel()->liczba_ofert = $e->getApplication()
                     ->getServiceManager()
                     ->get(Koszyk::class)

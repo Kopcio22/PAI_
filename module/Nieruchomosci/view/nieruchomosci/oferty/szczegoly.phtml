@@ -1,1 +1,74 @@
+<?php
+$this->headScript()->appendFile($this->basePath('/js/zapytanie.js'));
+
+$email = new \Laminas\Form\Element\Email('email');
+$email->setAttributes(['rows' => 5]);
+$email->setAttributes(['placeholder' => 'Email']);
+
+$telefon = new \Laminas\Form\Element\Tel('telefon');
+$telefon->setAttributes(['rows' => 5]);
+$telefon->setAttributes(['placeholder' => 'Numer Telefonu']);
+
+$tresc = new \Laminas\Form\Element\Textarea('tresc');
+$tresc->setAttributes(['rows' => 5]);
+$tresc->setValue("Jestem zainteresowany ofertą numer $oferta[numer]. \nProszę o kontakt.");
+?>
+
 <h2>Szczegóły oferty <?= $oferta->numer ?></h2>
+
+<p>
+	<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalZapytanie">
+		Wyślij zapytanie
+	</button>
+
+    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalPdf">
+        Wyślij ofertę na email
+    </button>
+
+</p>
+
+<div class="modal fade" id="modalZapytanie" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Zapytanie</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form method="post" action="<?= $this->url('nieruchomosci/zapytanie', ['action' => 'wyslij'], null, true) ?>" id="formZapytanie">
+                    <?= $this->formElement($email) ?>
+                    <?= $this->formElement($telefon) ?>
+                    <?= $this->formElement($tresc) ?>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="btnWyslij">Wyślij</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalPdf" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Zapytanie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="<?= $this->url('nieruchomosci/zapytanie', ['action' => 'wyslijPdf'], null, true) ?>" id="formZapytanieTwo">
+                    <?= $this->formElement($email) ?>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnWyslijPdf">Wyślij</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+            </div>
+        </div>
+    </div>
+</div>

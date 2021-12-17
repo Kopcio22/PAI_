@@ -2,12 +2,12 @@
 
 namespace Nieruchomosci\Controller;
 
-use Mpdf\Mpdf;
-use Nieruchomosci\Form;
-use Nieruchomosci\Model\Oferta;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\ViewModel;
 use Laminas\View\Renderer\PhpRenderer;
+use Mpdf\Mpdf;
+use Nieruchomosci\Form;
+use Nieruchomosci\Model\Oferta;
 
 class OfertyController extends AbstractActionController
 {
@@ -48,9 +48,12 @@ class OfertyController extends AbstractActionController
 
     public function szczegolyAction()
     {
+
         $daneOferty = $this->oferta->pobierz($this->params()->fromRoute('id'));
 
-        return ['oferta' => $daneOferty];
+        return [
+            'oferta' => $daneOferty,
+        ];
     }
 
     public function drukujAction()
@@ -69,5 +72,4 @@ class OfertyController extends AbstractActionController
 
         return $this->getResponse();
     }
-
 }

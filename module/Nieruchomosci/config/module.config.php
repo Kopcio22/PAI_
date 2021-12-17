@@ -2,15 +2,18 @@
 
 namespace Nieruchomosci;
 
-use Nieruchomosci\Controller\KoszykController;
-use Nieruchomosci\Controller\OfertyController;
-use Nieruchomosci\Model\Koszyk;
-use Nieruchomosci\Model\Oferta;
 use Laminas\Mvc\Controller\LazyControllerAbstractFactory;
 use Laminas\Navigation\Service\DefaultNavigationFactory;
 use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
 use Laminas\ServiceManager\Factory\InvokableFactory;
+use Nieruchomosci\Controller\KoszykController;
+use Nieruchomosci\Controller\OfertyController;
+use Nieruchomosci\Controller\ZapytanieController;
+use Nieruchomosci\Model\Koszyk;
+use Nieruchomosci\Model\Oferta;
+use Nieruchomosci\Model\Zapytanie;
+use Nieruchomosci\Model\ZapytanieFactory;
 
 return [
     'router' => [
@@ -41,6 +44,15 @@ return [
                             ],
                         ],
                     ],
+                    'zapytanie' => [
+                        'type' => Segment::class,
+                        'options' => [
+                            'route' => 'zapytanie[/:action[/:id]]',
+                            'defaults' => [
+                                'controller' => ZapytanieController::class,
+                            ],
+                        ],
+                    ],
                 ],
             ]
         ]
@@ -49,6 +61,7 @@ return [
         'factories' => [
             OfertyController::class => LazyControllerAbstractFactory::class,
             KoszykController::class => LazyControllerAbstractFactory::class,
+            ZapytanieController::class => LazyControllerAbstractFactory::class,
         ],
     ],
     'service_manager' => [
@@ -56,6 +69,8 @@ return [
             'navigation' => DefaultNavigationFactory::class,
             Oferta::class => InvokableFactory::class,
             Koszyk::class => InvokableFactory::class,
+            Zapytanie::class => ZapytanieFactory::class,
+
         ],
     ],
     'view_manager' => [
@@ -77,7 +92,6 @@ return [
             [
                 'label' => 'Koszyk',
                 'route' => 'nieruchomosci/koszyk',
-                'action' => 'lista'
             ],
         ],
     ],

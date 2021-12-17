@@ -22,7 +22,8 @@
     "laminas/laminas-navigation": "^2.10",
     "laminas/laminas-paginator": "^2.9",
     "neilime/zf-twbs-helper-module": "^3.3",
-    "mpdf/mpdf": "^8.0"
+    "mpdf/mpdf": "^8.0",
+    "laminas/laminas-mail": "^2.12"
   },
   "require-dev": {
     "symfony/var-dumper": "^5.1"
